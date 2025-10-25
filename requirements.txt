@@ -1,0 +1,5 @@
+pygame
+mido
+numpy
+sounddevice
+scipy
