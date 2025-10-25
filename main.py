@@ -190,9 +190,9 @@ def draw_falling_notes(surface, current_playback_time):
                     text_rect = note_text.get_rect(center=falling_note_rect.center)
                     surface.blit(note_text, text_rect)
 
-def load_piano_samples_jobro():
+def load_piano_samples():
     global actual_sample_rate, loaded_samples
-    SAMPLE_DIR = "samples/2489__jobro__piano-ff/"
+    SAMPLE_DIR = "samples/piano/"
     print(f"Loading piano samples from ({SAMPLE_DIR})...")
     midi_offset = 36
     try:
@@ -251,7 +251,7 @@ def restart_playback():
 # --- Initialization ---
 build_piano_keys()
 get_midi_files()
-load_piano_samples_jobro()
+load_piano_samples()
 
 midi_port = None
 try:
